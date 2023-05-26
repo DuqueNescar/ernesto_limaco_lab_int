@@ -1,2 +1,6 @@
-# ignore todos los archivos .idea del proyecti
-# ignore las bases de dato sqlite3 que viene x defecto al crear u nproyexit
+# Ignora todos los directorios .idea del proyecto que se agegan al usar Pycharm
+.idea
+__pycache__
+
+# Ignora la base de datos sqlite3 que viene por defecto al crear un proyecto en Django
+*.sqlite3
