@@ -1,0 +1,40 @@
+{% extends "owner/base_generic.html" %}
+
+
+{% block content %}
+
+{% comment %}<h1> Bienvenidos </h1>
+    {% if nombre %}
+        <h2> Su pase esta vigente </h2>
+    {% else %}
+        <h2> Su pase esta vigente </h2>
+
+
+    {% endif %}
+
+
+    {% if edad > 18 %}
+        <p>{{ nombre }} es mayor de edad y de nacionalidad {{ pais }} </p>
+
+    {% else %}
+
+        <p>{{ nombre }} es menor de edad y de nacionalidad {{ pais }} </p>
+
+    {% endif %}
+
+
+<button type="button" class="btn btn-primary">Python</button>{% endcomment %}
+
+ {% comment %}   {% for owner in data %}
+        {{ owner.edad }}
+        <li>
+            <p><strong> Nombre de owner: </strong> {{ owner.nombre }} </p>
+
+        </li>
+    {% endfor %}
+{% endcomment %}
+
+
+
+
+{% endblock %}
