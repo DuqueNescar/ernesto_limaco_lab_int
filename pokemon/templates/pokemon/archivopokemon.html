@@ -1,0 +1,32 @@
+{% extends "pokemon/base_generic.html" %}
+
+{% block content %}
+
+<h1> “¡¡Hola Pythonista, el App pokemoin  está  funcionando correctamente!!” </h1>
+
+{#    {% for pokemon in data %}#}
+{##}
+{#    {% if edad > 18 %}#}
+{#        <p>{{ pokemon.nombre }} es mayor de edad y de nacionalidad {{ pokemon.pais }} </p>#}
+{##}
+{#    {% else %}#}
+{##}
+{#        <p>{{ pokemon.nombre }} es menor de edad y de nacionalidad {{ pokemon.pais }} </p>#}
+{##}
+{#    {% endif %}#}
+{#    {% endfor %}#}
+
+
+
+    <div>
+        {% for pokemon in data %}
+
+            <p><strong> Nonbre y tipo  </strong> {{ pokemon.nombre }} es de  {{ pokemon.tipo }}  </p>
+
+        {% endfor %}
+    </div>
+
+<button type="button" class="btn btn-primary">Python</button>
+
+
+{% endblock %}

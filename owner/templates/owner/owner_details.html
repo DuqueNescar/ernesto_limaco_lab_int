@@ -1,0 +1,39 @@
+{% extends "owner/base_generic.html" %}
+
+
+{% block content %}
+
+    <h3>Lista de registrados </h3>
+
+    <div class="card-body">
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Accion</th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+                {% for owner in data %}
+
+                        <tr>
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td><p>{{ owner.nombre }} es de {{ owner.pais }}</p></td>
+                            <td>
+                                <a class="btn btn-primary" href="" role="button">Editar </a>
+                                <a class="btn btn-danger" href=""role="button">Eliminar </a>
+                            </td>
+
+                        </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+{% endblock %}

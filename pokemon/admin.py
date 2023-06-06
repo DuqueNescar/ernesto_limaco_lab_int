@@ -1,4 +1,11 @@
 from django.contrib import admin
 from pokemon.models import pokemon
+
+
 # Register your models here.
-admin.site.register(pokemon)
+@admin.register(pokemon)
+class PokemonAdmin(admin.ModelAdmin):
+    fields = ('nombre', 'tipo', 'numero',)
+    list_display = ('nombre', 'generacion', 'tipo')
+    search_fields = ('nombre',)
+

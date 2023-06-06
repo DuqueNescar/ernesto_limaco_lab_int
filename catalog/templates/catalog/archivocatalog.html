@@ -1,0 +1,24 @@
+{% extends "catalog/base_generic.html" %}
+
+{% block content %}
+
+<h1> “¡¡Hola Pythonista, el App catalog está
+    funcionando correctamente!!” </h1>
+
+    {% for catalog in data %}
+    {% if edad > 18 %}
+        <p>{{ catalog.nombre }} es mayor de edad y de nacionalidad {{ catalog.pais }} </p>
+
+    {% else %}
+
+        <p>{{ catalog.nombre }} es menor de edad y de nacionalidad {{ catalog.pais }} </p>
+
+    {% endif %}
+    {% endfor %}
+
+    {% for catalog in data %}
+
+        <p><strong> Nombre y pais  </strong> {{ catalog.nombre }}  es de {{ catalog.pais }} </p>
+
+    {% endfor %}
+{% endblock %}

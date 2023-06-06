@@ -3,8 +3,8 @@
 
 {% block content %}
 
-{% comment %}<h1> Bienvenidos </h1>
-    {% if nombre %}
+<h1> Bienvenidos </h1>
+    {% comment %}{% if nombre %}
         <h2> Su pase esta vigente </h2>
     {% else %}
         <h2> Su pase esta vigente </h2>
@@ -21,20 +21,31 @@
         <p>{{ nombre }} es menor de edad y de nacionalidad {{ pais }} </p>
 
     {% endif %}
+{% endcomment %}
 
 
-<button type="button" class="btn btn-primary">Python</button>{% endcomment %}
 
- {% comment %}   {% for owner in data %}
+{% comment %}
+    {% for owner in data %}
         {{ owner.edad }}
         <li>
-            <p><strong> Nombre de owner: </strong> {{ owner.nombre }} </p>
+            <p><strong> Nombre de owner: </strong> {{ owner.nombre | upper }} </p>
 
         </li>
     {% endfor %}
 {% endcomment %}
 
+    <div>
+
+    {% for owner in data %}
+
+        <p><strong> Nombre y pais  </strong> {{ owner.nombre }}  es de {{ owner.pais }} </p>
+
+    {% endfor %}
 
 
+    </div>
+
+<button type="button" class="btn btn-primary">Python</button>
 
 {% endblock %}
