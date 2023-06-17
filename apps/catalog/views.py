@@ -27,4 +27,4 @@ def catalog_list(request):
 
     #data_context = catalog.objects.filter(nombre='Duque Nescar')
 
-    return render(request, 'catalog/archivocatalog.html', context={'data': data_context})
+    return render(request, 'catalog/templates/catalog/archivocatalog.html', context={'data': data_context})

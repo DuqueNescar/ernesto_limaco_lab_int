@@ -1,5 +1,5 @@
 from django.contrib import admin
-from pokemon.models import pokemon
+from apps.pokemon.models import pokemon
 
 
 # Register your models here.

@@ -1,0 +1,22 @@
+{% extends "owner/base_generic.html" %}
+
+{% block content %}
+    <h1>Confirmar la eliminacion del owners</h1>
+    <div class="card-body">
+        <ul> Actualizar datos </ul>
+
+        <form method="post">
+
+            {% csrf_token %}
+            <h3>¿desea eliminar el registro de {{ object.nombre }}</h3>
+            <button type="submit" class="btn btn-success"> Si, eliminarr</button>
+
+
+            <a class="btn btn-danger" href="{% url 'owner_list_vc' %}">Cancelar</a>
+
+
+        </form>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "owner/base_generic.html" %}
+
+{% block content %}
+    <h1>Editar Owner con vistas basadas en modelos</h1>
+    <div class="card-body">
+        <ul> Actualizar datos </ul>
+        <form method="post">
+
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <a class="btn btn-danger" href="{% url 'owner_list_vc' %}">Cancelar</a>
+
+            <button type="submit" class="btn btn-success"> Editar Owner</button>
+
+        </form>
+
+    </div>
+
+{% endblock %}

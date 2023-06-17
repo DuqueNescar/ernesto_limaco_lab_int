@@ -3,7 +3,7 @@
 
 {% block content %}
 
-    <h3>Lista de registrados </h3>
+    <h3>Lista de registrados (vista basada en clases)</h3>
 
     <div class="card-body">
 
@@ -18,18 +18,19 @@
             </thead>
             <tbody>
 
-                {% for owner in data %}
+                {% for owner in object_list %}
 
                         <tr>
                             <th scope="row">{{ forloop.counter }}</th>
-                            <td><p>{{ owner.nombre }} es de {{ owner.pais }}</p></td>
+                            <td><p>{{ owner.nombre }} es de {{ owner.pais }} y es {{ owner.descripcion }}</p></td>
                             <td>
-                                <a class="btn btn-primary" href="" role="button">Editar </a>
-                                <a class="btn btn-danger" href=""role="button">Eliminar </a>
+                                <a class="btn btn-primary" href="{% url 'owner_edit_vc' owner.id %}" role="button">Editar </a>
+                                <a class="btn btn-danger" href="{% url 'owner_delete_vc' owner.id %}" role="button">Eliminar </a>
                             </td>
 
                         </tr>
                 {% endfor %}
+
             </tbody>
         </table>
     </div>

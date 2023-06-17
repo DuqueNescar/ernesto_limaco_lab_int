@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 
-from owner.models import Owner
+from apps.owner.models import Owner
 
 
 class OwnerForm(ModelForm):
