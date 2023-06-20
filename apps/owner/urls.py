@@ -19,4 +19,9 @@ urlpatterns = [
     # URLs Serializers
     path('owner_list_serializer/', views.ListOwnerSerializer, name="owner_list_ssr"),
 
+    # URLs DRF
+    path('owner_list_drf_def/', views.owner_api_view, name='owner_list_drf_def'),
+    path('owner_detail_drf_def/<int:pk>', views.owner_details_view, name='owner_detail_drf_def')
+
+
 ]
